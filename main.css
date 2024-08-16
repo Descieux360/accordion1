@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:  hsl(275, 100%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+    max-height: max-content;
+    overflow: scroll;
+    position: relative;
+    padding: 10px 0;
+}
+
+.container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    width: 600px;
+    border-radius:1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+p{
+    color: hsl(292, 16%, 49%);
+}
+
+
+.title{
+    display: flex;
+    align-self: flex-start;
+}
+
+.title h1{
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.title img {
+    margin-right: 15px;
+}
+
+
+.accordion{
+  padding: 10px 0;
+  border-bottom: 1px solid #d3d3d3;
+  transition: 0.4s all;
+}
+
+.accordion .accordion_tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    transition: 0.4s all;
+}
+
+.accordion .accordion_tittle h2{
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 30px;
+}
+
+.notText{
+    display: none;
+}
+
+.isText{
+    animation: slideIn 0.8s ease-in-out;
+    padding: 7px;
+    display: block;
+}
+
+/* Media Query */
+
+@media (max-width: 768px){
+    body{
+        height: max-content;
+        background-image: url('assets/images/background-pattern-mobile.svg');
+    }
+     .container{
+        height: max-content;
+        margin-top: 130px;
+        margin-bottom: 50px;
+        width: 85%;
+    }
+    .title h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 13.5px;
+    }
+    .accordion .accordion_tittle h2{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 30px;
+     }
+} 
+
+@media (min-width: 1440px) {
+ body{
+  min-height: 100vh;
+ } 
+ .container{
+    margin-top: 155px ;
+ }
+ .attribution{
+    top: 110%;
+  }
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50px);
+    }
+
+    50% {
+        opacity: 0.5;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
